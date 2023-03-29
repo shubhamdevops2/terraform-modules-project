@@ -4,14 +4,14 @@ terraform {
 
 provider "aws" {
   region     = var.aws_region
-  access_key = "${var.AWS_ACCESS_KEY}"
-  secret_key = "${var.AWS_SECRET_KEY}"
+  access_key = var.AWS_ACCESS_KEY
+  secret_key = var.AWS_SECRET_KEY
 }
 
 variable "AWS_ACCESS_KEY" {
 }
 
-variable "AWS_SECRET_KEY" {  
+variable "AWS_SECRET_KEY" {
 }
 
 data "aws_availability_zones" "available" {}
